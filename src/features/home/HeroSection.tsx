@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="grid grid-cols-1 items-center justify-between gap-10 rounded-md bg-red-50 p-5 md:grid-cols-2">
+    <section className="grid grid-cols-1 items-center justify-between gap-10 overflow-hidden rounded-md bg-red-50 p-5 md:grid-cols-2">
       <div className="col-span-1 flex w-full justify-center overflow-hidden rounded-lg border-4 border-red-500 shadow-lg">
         <Image
           className="h-full w-full duration-100 hover:scale-110"

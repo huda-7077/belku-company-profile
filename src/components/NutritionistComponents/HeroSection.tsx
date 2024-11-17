@@ -7,36 +7,36 @@ const HeroSection: React.FC = () => {
   return (
     <section
       data-layername="heroSection"
-      className="flex z-10 flex-wrap gap-10 items-center self-stretch pr-40 w-full max-md:pr-5 max-md:max-w-full"
+      className="z-10 flex w-full flex-wrap items-center gap-10 self-stretch pr-40 max-md:max-w-full max-md:pr-5"
     >
       {" "}
-      <div>
+      <div className="">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/5de5fcae448fc1db4803575f0664415cd27cdc235c9bc60cb5cd386d9281956f?placeholderIfAbsent=true&apiKey=a54b75d57d8041fca68d2ad49ee3043b"
           alt="Nutritionist hero image"
-          className="object-contain self-stretch my-auto rounded-none aspect-[1.14] min-w-[240px] w-[949px] max-md:max-w-full"
+          className="my-auto aspect-[1.14] w-[949px] min-w-[240px] self-stretch rounded-none object-contain max-md:max-w-full"
         />
       </div>
       <div
         data-layername="container"
-        className="flex flex-col flex-1 shrink self-stretch my-auto basis-0 min-w-[240px] max-md:max-w-full"
+        className="my-auto flex min-w-[240px] flex-1 shrink basis-0 flex-col self-stretch max-md:max-w-full"
       >
         <div
           data-layername="subContainer"
-          className="flex flex-col w-full max-md:max-w-full"
+          className="flex w-full flex-col max-md:max-w-full"
         >
           <div
             data-layername="container"
-            className="flex flex-col w-full max-md:max-w-full"
+            className="flex w-full flex-col max-md:max-w-full"
           >
             <div
               data-layername="subContainer"
-              className="flex flex-col w-full text-zinc-800 max-md:max-w-full"
+              className="flex w-full flex-col text-zinc-800 max-md:max-w-full"
             >
               <div
                 data-layername="container"
-                className="gap-2.5 self-start py-2.5 text-3xl font-semibold border-solid border-b-[3px] border-b-lime-300"
+                className="gap-2.5 self-start border-b-[3px] border-solid border-b-lime-300 py-2.5 text-3xl font-semibold"
               >
                 Transform Your ❤️ Health with
               </div>
@@ -61,17 +61,17 @@ const HeroSection: React.FC = () => {
           </div>
           <div
             data-layername="buttonsContainer"
-            className="flex gap-5 items-start self-start mt-12 text-lg font-semibold text-neutral-800 max-md:mt-10"
+            className="mt-12 flex items-start gap-5 self-start text-lg font-semibold text-neutral-800 max-md:mt-10"
           >
             <button
               data-layername="button"
-              className="gap-2 self-stretch px-5 py-4 bg-lime-300 rounded-lg"
+              className="gap-2 self-stretch rounded-lg bg-lime-300 px-5 py-4"
             >
               Get Started Today
             </button>
             <button
               data-layername="button"
-              className="gap-2 self-stretch px-6 py-4 bg-lime-50 rounded-lg border border-lime-100 border-solid max-md:px-5"
+              className="gap-2 self-stretch rounded-lg border border-solid border-lime-100 bg-lime-50 px-6 py-4 max-md:px-5"
             >
               Book a Demo
             </button>
@@ -79,34 +79,34 @@ const HeroSection: React.FC = () => {
         </div>
         <div
           data-layername="subContainer"
-          className="flex flex-wrap gap-2 items-center mt-16 w-full max-md:mt-10 max-md:max-w-full"
+          className="mt-16 flex w-full flex-wrap items-center gap-2 max-md:mt-10 max-md:max-w-full"
         >
           <div
             data-layername="container"
-            className="flex gap-0 items-center self-stretch px-2.5 py-2 my-auto border border-lime-300 border-solid rounded-[58px]"
+            className="my-auto flex items-center gap-0 self-stretch rounded-[58px] border border-solid border-lime-300 px-2.5 py-2"
           >
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/7c839a4d0aeab5ad9998ec8306818d38bb3ce6ec370c2369ee2786f4aeb4f874?placeholderIfAbsent=true&apiKey=a54b75d57d8041fca68d2ad49ee3043b"
               alt="Happy customer 1"
-              className="object-contain shrink-0 self-stretch my-auto aspect-square rounded-[53px] w-[50px]"
+              className="my-auto aspect-square w-[50px] shrink-0 self-stretch rounded-[53px] object-contain"
             />
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/4df3be897c943ef6089ea74ba30ef999d7bb147a82290e0b4865754f63e73c9c?placeholderIfAbsent=true&apiKey=a54b75d57d8041fca68d2ad49ee3043b"
               alt="Happy customer 2"
-              className="object-contain shrink-0 self-stretch my-auto aspect-square rounded-[53px] w-[50px]"
+              className="my-auto aspect-square w-[50px] shrink-0 self-stretch rounded-[53px] object-contain"
             />
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e553eed193c8aa00c3cdb2e55ce6cd8b57122ee452e191b68cd8659fa4ef630?placeholderIfAbsent=true&apiKey=a54b75d57d8041fca68d2ad49ee3043b"
               alt="Happy customer 3"
-              className="object-contain shrink-0 self-stretch my-auto aspect-square rounded-[53px] w-[50px]"
+              className="my-auto aspect-square w-[50px] shrink-0 self-stretch rounded-[53px] object-contain"
             />
           </div>
           <div
             data-layername="text"
-            className="self-stretch my-auto text-xl font-semibold text-green-900"
+            className="my-auto self-stretch text-xl font-semibold text-green-900"
           >
             <span className="font-bold text-slate-500">430+</span>{" "}
             <span className="text-green-900">Happy Customers</span>

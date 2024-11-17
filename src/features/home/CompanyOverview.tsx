@@ -5,14 +5,19 @@ const CompanyOverview = () => {
   useAOS();
 
   return (
-    <section className="mt-10 flex w-full flex-col bg-red-50 p-5">
+    <section className="mt-10 flex h-[700px] w-full flex-col overflow-hidden rounded-md bg-red-50 p-5">
       <div
-        className="flex w-full flex-col p-7 text-center max-md:px-5 md:p-16"
+        className="flex w-full flex-col items-center px-72 pb-2 text-center max-md:max-w-full md:p-16"
         data-aos="fade-up"
       >
         <h2 className="text-4xl font-bold text-red-600 md:text-5xl">
           Company Overview
         </h2>
+        <p className="mt-2.5 text-lg font-medium leading-7 text-zinc-800 max-md:max-w-full">
+          A company overview is a brief description that provides insights into
+          our company, including the background of its establishment, vision and
+          mission, as well as the products or services we offer.
+        </p>
       </div>
       <div className="grid w-full grid-cols-1 gap-8 p-5 text-justify text-lg md:grid-cols-3">
         <div

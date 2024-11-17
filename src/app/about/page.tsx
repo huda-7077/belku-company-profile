@@ -1,4 +1,4 @@
-import AboutMe from "@/features/about/AboutMe";
+import AboutMe from "@/features/about";
 
 const page = () => {
   return (

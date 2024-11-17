@@ -2,14 +2,14 @@ import NutritionistPage from "@/components/NutritionistPage/NutritionistPage";
 import CompanyHistory from "./CompanyHistory";
 import HeroSection from "./HeroSection";
 
-const AboutMe = () => {
+const AboutPage = () => {
   return (
     <div className="container mx-auto bg-none p-5">
       <HeroSection />
       <CompanyHistory />
-      <NutritionistPage />
+      {/* <NutritionistPage /> */}
     </div>
   );
 };
 
-export default AboutMe;
+export default AboutPage;

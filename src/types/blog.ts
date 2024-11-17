@@ -10,7 +10,3 @@ export interface Blog {
   volume: number;
   content: any;
 }
-
-export interface ProductProps {
-  products: Blog[];
-}

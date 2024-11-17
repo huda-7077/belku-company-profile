@@ -1,9 +1,11 @@
 import BlogPage from "@/components/BlogPage/BlogPage";
+import HeroSection from "./HeroSection";
 
 const ProductsPage = () => {
   return (
     <main>
-      <BlogPage />
+      <HeroSection />
+      {/* <BlogPage /> */}
     </main>
   );
 };

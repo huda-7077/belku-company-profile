@@ -1,4 +1,4 @@
-import TeamsPage from "@/features/team/TeamsPage";
+import TeamsPage from "@/features/team";
 
 const page = () => {
   return (

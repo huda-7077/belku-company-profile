@@ -38,7 +38,7 @@ const CardSample: FC<CardSampleProps> = ({ product }) => {
   return (
     <div className="p-2">
       <Card
-        className="rounded-lg border border-red-500 shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+        className="overflow-hidden rounded-lg border border-red-500 shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
         data-aos="fade-up"
       >
         <CardHeader>

@@ -42,6 +42,34 @@ export const getEntries = async () => {
     console.log(error);
   }
 };
+export const getEntriesTeam = async () => {
+  try {
+    const response = await client.getEntries({
+      content_type: "belkuTeam",
+    });
+
+    // console.log(response);
+
+    const teams = response.items.map((team: ResponseEntry) => {
+      return {
+        entryId: team.sys.id,
+        name: team.fields.name,
+        division: team.fields.division,
+        description: team.fields.description,
+        thumbnail: "https:" + team.fields.image.fields.file.url,
+        thumbnailName: team.fields.image.fields.file.fileName,
+        role: team.fields.role,
+        quotes: team.fields.quotes,
+      };
+    });
+    // console.log(response.includes?.Asset);
+
+    return teams;
+    // console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // mengambil 1 data saja berdasarkan entryId
 // export const getEntry = async (slug: string) => {
