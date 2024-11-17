@@ -2,11 +2,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { fetchHappyCostumer, Member } from "@/lib/randomuser";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const HeroSection = () => {
   const [teamData, setTeamData] = useState<Member[]>([]);
 
-  // Mengambil data tim dari API
   useEffect(() => {
     const getTeamData = async () => {
       try {
@@ -52,11 +53,15 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="mt-5 flex flex-wrap gap-5 text-lg font-semibold text-red-800 md:mt-12">
-          <button className="rounded-lg border border-red-100 bg-red-100 px-6 py-4 hover:bg-red-300">
+        <Link
+          href="/products"
+          passHref
+          className="mt-5 gap-5 md:mt-12 md:px-6 md:py-4"
+        >
+          <Button className="lex h-12 flex-wrap rounded-lg border border-red-300 bg-red-100 text-lg font-semibold text-red-800 hover:bg-red-500 hover:text-red-100">
             Pesan Sekarang
-          </button>
-        </div>
+          </Button>
+        </Link>
 
         <div className="mt-5 flex flex-wrap items-center gap-2 md:mt-14">
           <div className="flex items-center gap-2 rounded-full border border-orange-500 bg-orange-100 px-2.5 py-2">

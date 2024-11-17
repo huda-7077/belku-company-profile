@@ -63,7 +63,6 @@ const NavbarComp = () => {
           />
         </Link>
 
-        {/* Menubar for small screens */}
         <div className="flex items-center md:pr-14 lg:hidden">
           <button
             onClick={toggleMenu}
@@ -77,7 +76,6 @@ const NavbarComp = () => {
           </button>
         </div>
 
-        {/* Menu for large screens */}
         <div className="hidden items-center gap-7 pr-20 text-lg font-bold text-white lg:flex">
           <Link
             href="/"
@@ -104,7 +102,7 @@ const NavbarComp = () => {
             Product
           </Link>
           <button
-            onClick={() => handleLinkClick("/contact")}
+            onClick={() => handleLinkClick("/about#contact-me")}
             className="ml-4 h-14 w-36 rounded-lg bg-yellow-300 text-lg font-bold text-neutral-800 hover:bg-yellow-400"
           >
             Contact Us
@@ -112,7 +110,6 @@ const NavbarComp = () => {
         </div>
       </nav>
 
-      {/* Fullscreen Modal for small screens */}
       {menuOpen && (
         <div className="fixed inset-0 z-30 flex flex-col bg-opacity-80 bg-gradient-to-r from-yellow-600 via-orange-700 to-red-700 text-white backdrop-blur-md">
           <button
@@ -152,8 +149,8 @@ const NavbarComp = () => {
               Product
             </Link>
             <Link
-              href="/contact"
-              onClick={() => handleLinkClick("/contact")}
+              href="/about#contact-me"
+              onClick={() => handleLinkClick("/about")}
               className="w-full bg-yellow-300 px-6 py-4 text-center text-2xl text-neutral-800 hover:bg-yellow-400"
             >
               Contact Us

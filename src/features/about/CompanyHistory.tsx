@@ -15,13 +15,13 @@ const CompanyHistory = () => {
   };
 
   return (
-    <section className="mt-5 flex flex-col items-center bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 p-5 text-center md:mt-5">
-      <h1 className="p-2 text-4xl font-bold text-red-600 md:p-10 md:text-6xl">
+    <section className="flex flex-col items-center bg-gradient-to-br from-red-700 via-red-600 to-red-500 p-8 text-center text-white md:min-h-[100vh]">
+      <h1 className="p-4 text-4xl font-bold md:py-20 md:text-5xl lg:text-6xl">
         Company History
       </h1>
-      <div className="mt-5 space-y-4 transition-all duration-500 ease-in-out">
+      <div className="mt-6 space-y-6 transition-all duration-500 ease-in-out">
         <Card
-          className="bg-red-200/75 p-4 text-justify text-xl text-red-800 md:max-w-[800px] md:text-2xl"
+          className="bg-white/20 p-6 text-justify text-lg text-white md:max-w-[800px] md:text-xl"
           data-aos="fade-up"
         >
           <CardContent>
@@ -38,10 +38,10 @@ const CompanyHistory = () => {
         {isExpanded && (
           <>
             <Card
-              className="bg-red-200/75 px-4 text-justify text-xl text-red-800 md:max-w-[800px] md:text-2xl"
+              className="bg-white/20 p-6 text-justify text-lg text-white md:max-w-[800px] md:text-xl"
               data-aos="fade-up"
             >
-              <CardContent className="my-4 transition-all duration-500 ease-in-out">
+              <CardContent>
                 Berbagai percobaan dilakukan untuk menemukan resep sambal yang
                 lezat dan tahan lama tanpa mengorbankan kualitas dan cita rasa.
                 Setelah melalui proses eksperimen dan penyempurnaan resep,
@@ -52,10 +52,10 @@ const CompanyHistory = () => {
               </CardContent>
             </Card>
             <Card
-              className="bg-red-200/75 px-4 text-justify text-xl text-red-800 md:max-w-[800px] md:text-2xl"
+              className="bg-white/20 p-6 text-justify text-lg text-white md:max-w-[800px] md:text-xl"
               data-aos="fade-up"
             >
-              <CardContent className="my-4 transition-all duration-500 ease-in-out">
+              <CardContent>
                 Pada Desember 2022, BELKU resmi meluncurkan produk pertamanya
                 yang diberi nama "Belri," yaitu sambal teri. Sambal ini langsung
                 mendapat sambutan hangat dari pasar karena cita rasa pedas
@@ -67,10 +67,10 @@ const CompanyHistory = () => {
               </CardContent>
             </Card>
             <Card
-              className="bg-red-200/75 px-4 text-justify text-xl text-red-800 md:max-w-[800px] md:text-2xl"
+              className="bg-white/20 p-6 text-justify text-lg text-white md:max-w-[800px] md:text-xl"
               data-aos="fade-up"
             >
-              <CardContent className="my-4 transition-all duration-500 ease-in-out">
+              <CardContent>
                 Dengan beragam pilihan ini, BELKU telah berhasil menarik
                 perhatian para pencinta kuliner pedas dan tradisional. Sambal
                 Keluarga Utama terus berkomitmen menghadirkan produk sambal
@@ -82,10 +82,12 @@ const CompanyHistory = () => {
         )}
         <Button
           onClick={handleToggle}
-          className="mx-auto mt-2 flex items-center justify-center bg-red-600 text-white transition-transform duration-300 ease-in-out hover:bg-red-700 focus:outline-none"
+          className="mx-auto mt-4 flex items-center justify-center bg-red-700 px-4 py-2 text-lg font-semibold text-white transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-red-800 focus:outline-none"
         >
           <FaChevronDown
-            className={`transform transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
+            className={`transform transition-transform duration-300 ${
+              isExpanded ? "rotate-180" : ""
+            }`}
           />
         </Button>
       </div>

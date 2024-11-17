@@ -28,7 +28,7 @@ const FooterComp = () => {
             </li>
             <li>
               <Link href="/teams" className="hover:text-yellow-300">
-                Careers
+                Teams
               </Link>
             </li>
             <li>

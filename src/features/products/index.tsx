@@ -1,4 +1,4 @@
-import HeroSection from "./HeroSection";
+import ProductImagesSection from "./ProductImagesSection";
 import ProductsSection from "./ProductsSection";
 import { getEntries } from "@/lib/contentful";
 
@@ -9,7 +9,7 @@ const ProductsPage = async () => {
   }
   return (
     <main>
-      <HeroSection />
+      <ProductImagesSection />
       <ProductsSection products={blogs} />
     </main>
   );
