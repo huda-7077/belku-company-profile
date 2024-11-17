@@ -2,14 +2,10 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import Image from "next/image";
 
-const spicyImages = [
-  "/assets/BELKU_1.webp",
-  "/assets/BELKU_2.webp",
-  "/assets/BELKU_3.webp",
-  "/assets/BELKU_4.webp",
-  "/assets/BELKU_5.webp",
-  "/assets/BELKU_6.webp",
-];
+const spicyImages = Array.from(
+  { length: 30 },
+  (_, index) => `/assets/Belku-${index + 1}.webp`,
+);
 
 const firstRow = spicyImages.slice(0, spicyImages.length / 2);
 const secondRow = spicyImages.slice(spicyImages.length / 2);
