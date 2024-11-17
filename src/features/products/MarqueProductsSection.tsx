@@ -3,7 +3,7 @@ import Marquee from "@/components/ui/marquee";
 import Image from "next/image";
 
 const spicyImages = Array.from(
-  { length: 30 },
+  { length: 21 },
   (_, index) => `/assets/Belku-${index + 1}.webp`,
 );
 
@@ -23,9 +23,8 @@ const SpicyCard = ({ img }: { img: string }) => {
         <Image
           src={img}
           alt="Spicy Dish"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
+          fill
+          className="rounded-lg object-cover"
           priority={true} // Optional: Prioritize image loading
         />
       </div>

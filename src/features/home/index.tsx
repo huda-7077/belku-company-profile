@@ -6,6 +6,7 @@ import ProductsSample from "./ProductsSample";
 
 import { getEntries } from "@/lib/contentful";
 import TestimonialSection from "./TestimonialSection";
+import BlogsSection from "./BlogsSection";
 
 const HomePage = async () => {
   // console.log("ini isi blogs di komponen blog: ", blogs);
@@ -14,13 +15,12 @@ const HomePage = async () => {
     return;
   }
   return (
-    <main className="mx-auto bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 p-7">
-      {/* <main className="container mx-auto p-5"> */}
+    // <main className="mx-auto bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 p-7">
+    <main>
       <HeroSection />
       <CompanyOverview />
       <ProductsSample products={blogs} />
-
-      {/* </main> */}
+      <BlogsSection />
       <TestimonialSection />
     </main>
   );

@@ -24,6 +24,7 @@ export const getEntries = async () => {
       return {
         entryId: blog.sys.id,
         title: blog.fields.title,
+        link: blog.fields.link,
         slug: blog.fields.slug,
         description: blog.fields.description,
         thumbnail: "https:" + blog.fields.thumbnail.fields.file.url,

@@ -2,6 +2,7 @@ export interface Blog {
   entryId: string;
   title: string;
   slug: string;
+  link: string;
   description: string;
   thumbnail: string;
   thumbnailName: string;

@@ -1,4 +1,3 @@
-import TeamPage from "@/components/TeamPage/TeamPage";
 import DescriptionSection from "./DescriptionSection";
 import OurTeamsSection from "./OurTeamsSection";
 import ExecutiveSection from "./ExecutiveSection";
@@ -16,7 +15,6 @@ const TeamsPage = async () => {
       <ExecutiveSection teams={teams} />
       <OurTeamsSection teams={teams} />
       <JoinTeamsSection />
-      {/* <TeamPage /> */}
     </main>
   );
 };

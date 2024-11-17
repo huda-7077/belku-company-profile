@@ -1,5 +1,5 @@
-import NutritionistPage from "@/components/NutritionistPage/NutritionistPage";
 import CompanyHistory from "./CompanyHistory";
+import ContactMeSection from "./ContactMeSection";
 import HeroSection from "./HeroSection";
 
 const AboutPage = () => {
@@ -7,7 +7,7 @@ const AboutPage = () => {
     <div className="container mx-auto bg-none p-5">
       <HeroSection />
       <CompanyHistory />
-      {/* <NutritionistPage /> */}
+      <ContactMeSection />
     </div>
   );
 };

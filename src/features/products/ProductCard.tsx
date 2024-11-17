@@ -1,3 +1,4 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -5,10 +6,11 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
+import useAOS from "@/hooks/useAOS";
 import { Blog } from "@/types/blog";
 import Image from "next/image";
-import Link from "next/link";
 import { FC } from "react";
 
 interface CardSampleProps {
@@ -27,23 +29,25 @@ const calculateNewPrice = (price: number) => {
   return Math.round(increasedPrice / 1000) * 1000;
 };
 
-const CardSample: FC<CardSampleProps> = ({ product }) => {
+const ProductCard: FC<CardSampleProps> = ({ product }) => {
   const originalPrice = product.price;
   const newPrice = calculateNewPrice(originalPrice);
 
+  useAOS();
+
   return (
-    <div className="p-3">
+    <div className="p-2">
       <Card
-        className="overflow-hidden rounded-lg border border-red-600 shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:border-red-700 hover:shadow-2xl"
+        className="overflow-hidden rounded-lg border border-red-500 shadow-lg transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
         data-aos="fade-up"
       >
-        <CardHeader className="relative h-[250px] w-full overflow-hidden md:h-[400px]">
-          <div>
+        <CardHeader>
+          <div className="relative h-[300px] w-full md:h-[400px]">
             <Image
               src={product.thumbnail}
               alt={product.thumbnailName}
               fill
-              className="transform rounded-t-lg object-cover object-center transition-transform duration-300 hover:scale-110"
+              className="rounded-t-lg object-cover object-center"
             />
           </div>
         </CardHeader>
@@ -59,9 +63,9 @@ const CardSample: FC<CardSampleProps> = ({ product }) => {
           <h2 className="my-2 line-clamp-2 text-xl font-bold text-red-800">
             {product.title}
           </h2>
-          <p className="line-clamp-3 text-red-700">{product.description}</p>
+          <p className="line-clamp-4 text-red-700">{product.description}</p>
         </CardContent>
-        <CardFooter className="flex flex-col items-center justify-between gap-4 bg-red-50 md:flex-row">
+        <CardFooter className="flex items-center justify-between bg-red-50 p-5">
           <div className="flex items-center gap-2">
             <span className="text-red-600 line-through">
               {formatCurrency(newPrice)}
@@ -70,15 +74,13 @@ const CardSample: FC<CardSampleProps> = ({ product }) => {
               {formatCurrency(originalPrice)}
             </span>
           </div>
-          <Link href={product.link} passHref>
-            <Button className="bg-red-600 text-white hover:bg-red-700">
-              Buy Now
-            </Button>
-          </Link>
+          <Button className="bg-red-600 text-white hover:bg-red-700">
+            Buy Now
+          </Button>
         </CardFooter>
       </Card>
     </div>
   );
 };
 
-export default CardSample;
+export default ProductCard;
