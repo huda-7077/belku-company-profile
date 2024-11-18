@@ -43,7 +43,7 @@ const ProductCard: FC<CardSampleProps> = ({ product }) => {
               src={product.thumbnail}
               alt={product.thumbnailName}
               fill
-              className="transform rounded-t-lg object-cover object-center transition-transform duration-300 hover:scale-110"
+              className="transform object-cover object-center transition-transform duration-300 hover:scale-110"
             />
           </div>
         </CardHeader>
