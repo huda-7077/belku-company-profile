@@ -2,8 +2,6 @@ import { FC } from "react";
 import { getEntry } from "@/lib/contentful";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import { format } from "date-fns";
-import RichTextRenderer from "@/components/RichTextRenderer";
 import ShareButton from "@/components/ShareButton";
 
 interface ProfileDetailProps {
@@ -28,7 +26,6 @@ const pathUrl: FC<ProfileDetailProps> = async ({ params }) => {
               {blog.title}
             </h1>
             <div className="mb-2 flex items-center justify-between text-gray-600">
-              {/* <h3>{format(new Date(blog.createdAt), "dd MMMM yyyy")}</h3> */}
               <ShareButton />
             </div>
             <div className="relative mt-4 h-[200px] border-2 border-red-500 lg:h-[400px]">
@@ -47,10 +44,7 @@ const pathUrl: FC<ProfileDetailProps> = async ({ params }) => {
               />
             </div>
           </section>
-          <section className="mt-8">
-            {/* <RichTextRenderer richTextContent={blog.content} /> */}
-            {blog.content}
-          </section>
+          <section className="mt-8">{blog.content}</section>
         </main>
       ))}
     </>

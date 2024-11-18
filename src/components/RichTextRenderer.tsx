@@ -15,25 +15,25 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({
         <p>{children}</p>
       ),
       [BLOCKS.HEADING_1]: (node: Node, children: React.ReactNode) => (
-        <h1 className="text-3xl font-bold my-4">{children}</h1>
+        <h1 className="my-4 text-3xl font-bold">{children}</h1>
       ),
       [BLOCKS.HEADING_2]: (node: Node, children: React.ReactNode) => (
-        <h2 className="text-2xl font-semibold my-3">{children}</h2>
+        <h2 className="my-3 text-2xl font-semibold">{children}</h2>
       ),
       [BLOCKS.HEADING_3]: (node: Node, children: React.ReactNode) => (
-        <h3 className="text-xl font-medium my-2">{children}</h3>
+        <h3 className="my-2 text-xl font-medium">{children}</h3>
       ),
       [BLOCKS.UL_LIST]: (node: Node, children: React.ReactNode) => (
-        <ul className="list-disc ml-6">{children}</ul>
+        <ul className="ml-6 list-disc">{children}</ul>
       ),
       [BLOCKS.OL_LIST]: (node: Node, children: React.ReactNode) => (
-        <ol className="list-decimal ml-6">{children}</ol>
+        <ol className="ml-6 list-decimal">{children}</ol>
       ),
       [BLOCKS.LIST_ITEM]: (node: Node, children: React.ReactNode) => (
         <li className="my-1">{children}</li>
       ),
       [BLOCKS.QUOTE]: (node: Node, children: React.ReactNode) => (
-        <blockquote className="border-l-4 pl-4 italic my-4">
+        <blockquote className="my-4 border-l-4 pl-4 italic">
           {children}
         </blockquote>
       ),
@@ -47,7 +47,6 @@ const RichTextRenderer: React.FC<RichTextRendererProps> = ({
           {children}
         </a>
       ),
-      // Add more custom renderings as needed
     },
   };
 

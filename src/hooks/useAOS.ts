@@ -1,4 +1,3 @@
-// useAOS.ts
 "use client";
 import { useEffect } from "react";
 import AOS from "aos";

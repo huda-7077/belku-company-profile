@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button"; // Adjust the path based on your project structure
+import { Button } from "@/components/ui/button";
 
 const NavbarComp = () => {
   const [menuOpen, setMenuOpen] = useState(false);

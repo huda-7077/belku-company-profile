@@ -35,7 +35,6 @@ export const fetchTeamData = async (): Promise<TeamData> => {
     const data = await response.json();
     const results: Member[] = data.results;
 
-    // Distribute users across teams
     return {
       engineering: results.slice(0, 6),
       marketing: results.slice(6, 9),

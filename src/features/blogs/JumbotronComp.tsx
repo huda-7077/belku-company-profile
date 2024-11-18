@@ -1,5 +1,3 @@
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
 const JumbotronComp = () => {
   return (
     <section className="flex w-full flex-col items-center space-y-3 overflow-hidden bg-gradient-to-r from-orange-500 via-orange-400 to-orange-300 p-5 text-center">
@@ -17,11 +15,6 @@ const JumbotronComp = () => {
           universe! 🌶️
         </p>
       </div>
-
-      {/* <div className="flex w-full max-w-sm items-center space-x-2 p-2">
-        <Input type="email" placeholder="Search for articles" />
-        <Button type="submit">Search</Button>
-      </div> */}
     </section>
   );
 };

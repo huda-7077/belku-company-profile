@@ -12,14 +12,11 @@ const client = createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
 });
 
-// mengambil banyak data sekaligus
 export const getEntries = async () => {
   try {
     const response = await client.getEntries({
       content_type: "belkuBlog",
     });
-
-    // console.log(response);
 
     const blogs = response.items.map((blog: ResponseEntry) => {
       return {
@@ -36,10 +33,8 @@ export const getEntries = async () => {
         content: blog.fields.content,
       };
     });
-    // console.log(response.includes?.Asset);
 
     return blogs;
-    // console.log(response);
   } catch (error) {
     console.log(error);
   }
@@ -49,8 +44,6 @@ export const getEntriesTeam = async () => {
     const response = await client.getEntries({
       content_type: "belkuTeam",
     });
-
-    // console.log(response);
 
     const teams = response.items.map((team: ResponseEntry) => {
       return {
@@ -64,10 +57,8 @@ export const getEntriesTeam = async () => {
         quotes: team.fields.quotes,
       };
     });
-    // console.log(response.includes?.Asset);
 
     return teams;
-    // console.log(response);
   } catch (error) {
     console.log(error);
   }
