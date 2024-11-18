@@ -1,15 +1,28 @@
+"use client";
+import dynamic from "next/dynamic";
+import { useState } from "react";
+
+const LazyMapIframe = dynamic(() => import("./MapIframe"), {
+  loading: () => (
+    <div className="flex h-[320px] w-[700px] items-center justify-center bg-gray-200 text-gray-500">
+      Loading map...
+    </div>
+  ),
+  ssr: false,
+});
+
 const ServiceLocation = () => {
+  const [loadMap, setLoadMap] = useState(false);
+
   return (
     <section className="flex justify-center p-5">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1592.6250731560556!2d110.17816554369224!3d-7.897823823983436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1731881136516!5m2!1sid!2sid"
-        width="700"
-        height="320"
-        style={{ border: 0 }}
-        allowFullScreen={true}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      />
+      <button
+        onClick={() => setLoadMap(true)}
+        className="mb-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+      >
+        Show Map
+      </button>
+      {loadMap && <LazyMapIframe />}
     </section>
   );
 };
