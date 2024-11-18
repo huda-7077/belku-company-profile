@@ -1,5 +1,11 @@
+import BlogPage from "@/features/blogs";
+
 const page = () => {
-  return <>{/* <BlogPage /> */}</>;
+  return (
+    <>
+      <BlogPage />
+    </>
+  );
 };
 
 export default page;

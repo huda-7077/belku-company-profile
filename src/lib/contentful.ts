@@ -1,4 +1,5 @@
 import { createClient, FieldsType } from "contentful";
+import { cache } from "react";
 
 interface ResponseEntry {
   sys: { id: string };
@@ -72,13 +73,12 @@ export const getEntriesTeam = async () => {
   }
 };
 
-// mengambil 1 data saja berdasarkan entryId
-// export const getEntry = async (slug: string) => {
-//   try {
-//     const entries = await getEntries();
-//     const response = entries?.filter((blog) => blog.slug === slug);
-//     return response;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
+export const getEntry = cache(async (slug: string) => {
+  try {
+    const entries = await getEntries();
+    const response = entries?.filter((blog) => blog.slug === slug);
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+});

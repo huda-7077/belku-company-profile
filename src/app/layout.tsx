@@ -1,23 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import NavbarComp from "@/components/NavbarComp";
 import FooterComp from "@/components/FooterComp";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
 export const metadata: Metadata = {
-  title: "Sambal Keluarga Utama",
-  description: "Sambal",
+  title: "Sambal Keluarga Utama - Sambal Tradisional Indonesia",
+  description:
+    "Nikmati cita rasa autentik sambal Indonesia dari Sambal Keluarga Utama. Dibuat dengan bahan alami pilihan, sempurna untuk melengkapi hidangan Anda.",
+  keywords:
+    "sambal, sambal tradisional, sambal Indonesia, sambal pedas, resep sambal, sambal keluarga, sambal alami, makanan pedas, kuliner Indonesia, sambal autentik",
 };
 
 export default function RootLayout({
@@ -27,10 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className="bg-none"
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="bg-none">
         <NavbarComp />
         {children}
         <FooterComp />

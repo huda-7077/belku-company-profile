@@ -6,6 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button"; // Adjust the path based on your project structure
 
 const NavbarComp = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,16 +65,13 @@ const NavbarComp = () => {
         </Link>
 
         <div className="flex items-center md:pr-14 lg:hidden">
-          <button
+          <Button
+            variant="ghost"
             onClick={toggleMenu}
             className="flex h-12 w-12 items-center justify-center p-0 md:h-16 md:w-16"
           >
-            {menuOpen ? (
-              <AiOutlineClose style={{ height: "30px", width: "30px" }} />
-            ) : (
-              <FaBars style={{ height: "30px", width: "30px" }} />
-            )}
-          </button>
+            <FaBars style={{ height: "30px", width: "30px" }} />
+          </Button>
         </div>
 
         <div className="hidden items-center gap-7 pr-20 text-lg font-bold text-white lg:flex">
@@ -101,23 +99,25 @@ const NavbarComp = () => {
           >
             Product
           </Link>
-          <button
+          <Button
+            variant="default"
             onClick={() => handleLinkClick("/about#contact-me")}
-            className="ml-4 h-14 w-36 rounded-lg bg-yellow-300 text-lg font-bold text-neutral-800 hover:bg-yellow-400"
+            className="ml-4 h-14 w-36 bg-yellow-300 text-lg font-bold text-neutral-800 hover:bg-yellow-500"
           >
             Contact Us
-          </button>
+          </Button>
         </div>
       </nav>
 
       {menuOpen && (
         <div className="fixed inset-0 z-30 flex flex-col bg-opacity-80 bg-gradient-to-r from-yellow-600 via-orange-700 to-red-700 text-white backdrop-blur-md">
-          <button
+          <Button
+            variant="ghost"
             onClick={toggleMenu}
             className="absolute right-4 top-4 text-3xl text-white"
           >
             <AiOutlineClose />
-          </button>
+          </Button>
 
           <div className="flex flex-grow flex-col items-center justify-center gap-6">
             <Link
@@ -148,13 +148,13 @@ const NavbarComp = () => {
             >
               Product
             </Link>
-            <Link
-              href="/about#contact-me"
-              onClick={() => handleLinkClick("/about")}
+            <Button
+              variant="default"
+              onClick={() => handleLinkClick("/about#contact-me")}
               className="w-full bg-yellow-300 px-6 py-4 text-center text-2xl text-neutral-800 hover:bg-yellow-400"
             >
               Contact Us
-            </Link>
+            </Button>
           </div>
         </div>
       )}
